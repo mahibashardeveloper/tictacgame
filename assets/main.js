@@ -20,6 +20,8 @@ const
 
     replayBtn = resultBox.querySelector("button");
 
+    soundEffect = document.querySelector('#sound-effect')
+
 let
 
     // here declare play icons
@@ -33,6 +35,14 @@ let
     playerSign = "X",
 
     runBot = true;
+
+// this is sound effect function for use of start game play
+
+function playSoundEffect() {
+
+    soundEffect.play();
+
+}
 
 // when click btn work for click button after start game in box-area
 
@@ -71,6 +81,8 @@ selectO.onclick = ()=>{
 // this clickedBox work when game starting box hide and visible game box-area
 
 function clickedBox(element){
+
+    playSoundEffect()
 
     if(players.classList.contains("player")){
 
@@ -111,6 +123,8 @@ function clickedBox(element){
 // this is bot which is work play with me as an opponent
 
 function bot(){
+
+    playSoundEffect();
 
     let array = [];
 
